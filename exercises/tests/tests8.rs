@@ -7,9 +7,15 @@
 // Execute `rustlings hint tests8` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
-fn main() {}
+
+fn main() {
+    // This code will only be compiled if the "pass" feature is enabled
+    #[cfg(feature = "pass")]
+    {
+        println!("The 'pass' feature is enabled!");
+    }
+}
 
 #[cfg(test)]
 mod tests {
