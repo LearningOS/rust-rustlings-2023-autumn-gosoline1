@@ -10,9 +10,11 @@
 #[allow(unused_variables, unused_assignments)]
 fn main() {
     let my_option: Option<()> = None;
-    if my_option.is_none() {
-       // my_option.unwrap();
-       panic!();
+    if my_option.is_some() {
+        // 处理 my_option 包含值的情况
+    } else {
+        // 处理 my_option 为 None 的情况
+        panic!();
     }
 
     let my_arr = &[
